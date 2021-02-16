@@ -14,7 +14,6 @@ import java.util.concurrent.TimeUnit;
 public class OrgController {
     @Autowired
     OrgService orgService;
-    String NOT_FOUND = "No employee with this ID could be found.";
 
     @RequestMapping("/orgs")
     public ResponseEntity<List<OrgChartDTO>> getOrgChart(@RequestParam(value = "pageSize", required = false) Integer pageSize, @RequestParam(value = "pageNum", required = false) Integer pageNum, @RequestParam(value = "sort", required = false) String sort) {
